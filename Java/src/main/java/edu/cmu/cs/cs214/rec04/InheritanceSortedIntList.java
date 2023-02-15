@@ -9,5 +9,25 @@ package edu.cmu.cs.cs214.rec04;
  * @author Nora Shoemaker
  *
  */
-public class InheritanceSortedIntList {
+public class InheritanceSortedIntList extends SortedIntList{
+    private int totalAdded;
+    public InheritanceSortedIntList(){
+        super();
+        this.totalAdded = 0;
+    }
+
+    @Override
+    public boolean add(int num){
+        this.totalAdded++;
+        return super.add(num);
+    }
+
+    public boolean addAll(IntegerList list){
+        // this.totalAdded += list.size();
+        return super.addAll(list);
+    }
+
+    public int getTotalAdded(){
+        return this.getTotalAdded();
+    }
 }
